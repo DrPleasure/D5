@@ -29,6 +29,7 @@ button {
   height: 55vh;
   display: flex;
   flex-direction: column;
+  width: 55vh;
 }
 
 .add {
@@ -37,6 +38,10 @@ button {
 
 hr {
   opacity: 0.5;
+}
+
+.teamdiv hr {
+  margin-left: 10px;
 }
 
 h1 {

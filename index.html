@@ -37,71 +37,92 @@
 
       <div id="container2" class="add">
         <div id="teams">
-          <div class="row">
-            <div class="teamDiv">
-              <h3>Team 1</h3>
-              <ul id="team1">
-                <li>Name</li>
-                <li>Name</li>
-                <li>Name</li>
-              </ul>
-            </div>
+            <div class="row">
+                <div class="teamDiv">
+                  <h3>Team 1</h3>
+                  <ul id="team1">
+                    <li id="11">X</li>
+                    <hr>
+                    <li id="12">X</li>
+                    <hr>
 
-            <div class="teamDiv">
-              <h3>Team 2</h3>
-              <ul id="team2">
-                <li>Name</li>
-                <li>Name</li>
-                <li>Name</li>
-              </ul>
-            </div>
-            <div class="teamDiv">
-              <h3>Team 3</h3>
-              <ul id="team3">
-                <li>Name</li>
-                <li>Name</li>
-                <li>Name</li>
-              </ul>
-            </div>
-          </div>
-          <div class="row">
-            <div class="teamDiv">
-              <h3>Team 4</h3>
-              <ul>
-                <li>Name</li>
-                <li>Name</li>
-                <li>Name</li>
-              </ul>
-            </div>
+                    <li id="13">X</li>
+                    <hr>
 
-            <div class="teamDiv">
-              <h3>Team 5</h3>
-              <ul>
-                <li>Name</li>
-                <li>Name</li>
-                <li>Name</li>
-              </ul>
-            </div>
-            <div class="teamDiv">
-              <h3>Team 6</h3>
-              <ul>
-                <li>Name</li>
-                <li>Name</li>
-                <li>Name</li>
-              </ul>
-            </div>
+                  </ul>
+                </div>
+    
+                <div class="teamDiv">
+                  <h3>Team 2</h3>
+                  <ul id="team2">
+                    <li id="21">X</li>
+                    <hr>
+
+                    <li id="22">X</li>
+                    <hr>
+
+                    <li id="23">X</li>
+                    <hr>
+
+                  </ul>
+                </div>
+
+                <div class="teamDiv">
+                    <h3>Team 3</h3>
+                    <ul id="team2">
+                      <li id="21">X</li>
+                      <hr>
+  
+                      <li id="22">X</li>
+                      <hr>
+  
+                      <li id="23">X</li>
+                      <hr>
+  
+                    </ul>
+                  </div>
+                
+              </div>
+              
+              </div>
+              
+                </div>
+
+            
           </div>
         </div>
       </div>
     </div>
     <div id="buttonsBelow">
-      <button class="blue" id="assign">Assign Member</button
+      <button class="blue" id="assign" onclick="createTeam()">Assign Member</button
       ><button id="reset" onClick="window.location.reload();" class="red">
         Reset
       </button>
     </div>
 
     <script>
+
+// function to add names to teams
+
+
+
+function createTeam() {
+
+    var li = document.createElement("li");
+
+    const player = getElementById("nameList").childNodes;
+    const teamPlayer = getElementById("team1")
+
+    li.appendChild(document.createTextNode("player"));
+    player.appendChild(li);
+    
+
+
+    
+
+}
+
+
       // name input and return the value
       function myFunction(nameList) {
         var text = "";
@@ -169,6 +190,38 @@
           alert("you choice : " + number);
         };
       };
+
+// team number + / - function  not working
+/*
+document.getElementById("plus").onclick = function() {
+    count++ 
+    totalCount.innerHTML = count
+
+    let div = document.createElement("div")
+    div.classList.add("teamDiv")
+
+document.getElementById("container2").appendChild(div)
+div.id = "teams" + count
+div.insertAdjacentHTML("afterbegin", "<h3>" + "teams" + count + "</h3")
+
+
+}
+
+
+document.getElementById("minus").onclick = function() {
+    if (count === 1) {
+        return;
+    }
+else {
+    count--
+    totalCount.innerHTML = count
+    let parentNode = document.getElementById("container2")
+    parentNode.removeChild(parentNode.lastChild)
+}
+
+
+    }
+*/
 
       //audio function
       function ding() {
